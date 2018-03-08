@@ -1,0 +1,7 @@
+FROM centos:centos7
+
+WORKDIR /src
+
+ADD scripts/centos7/setup.sh setup.sh
+ADD scripts/centos7/build.sh build.sh
+RUN ./setup.sh && ./build.sh
