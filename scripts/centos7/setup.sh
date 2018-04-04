@@ -38,4 +38,4 @@ yum groupinstall -y "Development Tools"
 yum install -y apache-maven python-devel python-six python-virtualenv java-1.8.0-openjdk-devel zlib-devel libcurl-devel openssl-devel cyrus-sasl-devel cyrus-sasl-md5 apr-devel subversion-devel apr-util-devel
 
 git clone https://github.com/apache/mesos.git
-cd mesos && git checkout 1.4.0
+cd mesos && git checkout $MESOS_VERSION
