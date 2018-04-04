@@ -4,4 +4,8 @@ services:
 - docker
 
 script:
-- docker build -t clems4ever/mesos-build:1.4.0 -f Dockerfile.centos7 .
+- make
+
+after_success:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- make publish
