@@ -6,6 +6,8 @@ services:
 script:
 - make
 
-after_success:
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- make publish
+deploy:
+  provider: script
+  script: ./scripts/deploy.sh
+  on:
+    branch: travis

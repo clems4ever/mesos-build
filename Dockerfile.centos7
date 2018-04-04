@@ -1,7 +1,6 @@
 FROM centos:centos7
 
 WORKDIR /src
-
 ARG MESOS_VERSION=1.4.0
 
 ADD scripts/centos7/setup.sh setup.sh
